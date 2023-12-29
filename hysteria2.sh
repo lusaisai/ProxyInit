@@ -46,3 +46,6 @@ service supervisor restart
 # check
 cat /etc/hysteria/config.yaml
 
+
+# cert for local
+cat /certs/2.crt
