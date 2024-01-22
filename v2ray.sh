@@ -20,6 +20,7 @@ cat << EOF > /usr/local/etc/v2ray/config.json
 EOF
 
 # service
+systemctl enable v2ray.service
 service v2ray restart
 service v2ray status
 

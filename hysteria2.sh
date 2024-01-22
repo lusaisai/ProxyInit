@@ -1,3 +1,7 @@
+# system update
+apt update
+apt upgrade
+
 # install hysteria
 bash <(curl -fsSL https://get.hy2.sh/)
 
@@ -6,8 +10,8 @@ cat << EOF > /etc/hysteria/config.yaml
 # listen: :443
 
 tls:
-  cert: /certs/2.crt
-  key: /certs/2.key
+  cert: /certs/3.crt
+  key: /certs/3.key
 
 auth:
   type: password
@@ -23,13 +27,9 @@ EOF
 # certs
 mkdir -p /certs
 openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 \
-  -nodes -keyout /certs/2.key -out /certs/2.crt -subj "/CN=linux.com" \
+  -nodes -keyout /certs/3.key -out /certs/3.crt -subj "/CN=linux.com" \
   -addext "subjectAltName=DNS:linux.com,DNS:*.linux.com,IP:10.0.0.1"
 
-
-# system update
-apt update
-apt upgrade
 
 # install supervisor
 apt install supervisor
@@ -48,4 +48,4 @@ cat /etc/hysteria/config.yaml
 
 
 # cert for local
-cat /certs/2.crt
+cat /certs/3.crt
