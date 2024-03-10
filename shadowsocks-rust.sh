@@ -1,6 +1,7 @@
 snap install shadowsocks-rust
 
 # config
+mkdir -p /var/snap/shadowsocks-rust/common/etc/shadowsocks-rust/
 cat <<EOF > /var/snap/shadowsocks-rust/common/etc/shadowsocks-rust/config.json
 {
     "server": "0.0.0.0",

@@ -12,7 +12,7 @@ cat <<EOF > /etc/shadowsocks-libev/config.json
     "mode":"tcp_and_udp",
     "server_port":8388,
     "local_port":1080,
-    "password":"$(uuidgen)",
+    "password":"lusaisai",
     "timeout":86400,
     "method":"chacha20-ietf-poly1305"
 }
