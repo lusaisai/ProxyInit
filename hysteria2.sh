@@ -48,4 +48,21 @@ cat /etc/hysteria/config.yaml
 
 
 # cert for local
-cat /certs/3.crt
+openssl x509 -noout -fingerprint -sha256 -in /certs/3.crt
+
+
+# client config.yaml
+server: 172.233.136.187:443
+
+auth: same_uuid_here
+
+tls:
+  insecure: true
+  pinSHA256: fingerprint_here
+
+bandwidth:
+  up: 100 mbps
+  down: 1000 mbps
+
+socks5:
+  listen: 127.0.0.1:3080
