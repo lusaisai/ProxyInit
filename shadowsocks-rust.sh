@@ -5,7 +5,7 @@ mkdir -p /var/snap/shadowsocks-rust/common/etc/shadowsocks-rust/
 cat <<EOF > /var/snap/shadowsocks-rust/common/etc/shadowsocks-rust/config.json
 {
     "server": "0.0.0.0",
-    "server_port": 9000,
+    "server_port": 18000,
     "password": "$(uuidgen | head -c 32 | base64)",
     "fast_open": true,
     "method": "2022-blake3-aes-256-gcm"
