@@ -47,7 +47,7 @@ service supervisor restart
 cat /etc/hysteria/config.yaml
 
 
-# cert for local
+# fingerprint for local
 openssl x509 -noout -fingerprint -sha256 -in /certs/3.crt
 
 
