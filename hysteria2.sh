@@ -52,17 +52,20 @@ openssl x509 -noout -fingerprint -sha256 -in /certs/3.crt
 
 
 # client config.yaml
-server: 172.233.136.187:443
+server: :443
 
-auth: same_uuid_here
+auth:
 
 tls:
   insecure: true
-  pinSHA256: fingerprint_here
+  pinSHA256: 
 
 bandwidth:
-  up: 100 mbps
-  down: 1000 mbps
+  up: 50 mbps
+  down: 500 mbps
 
 socks5:
-  listen: 127.0.0.1:3080
+  listen: :3080
+
+http:
+  listen: :3081
